@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Search</title>
+    <style>
+        /* Add some basic styling */
+        #searchInput {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="searchInput" placeholder="Type to search...">
+    <button onclick="filterResults()">Search</button>
+
+    <ul id="resultsList">
+        <!-- Your initial list of items -->
+        <li data-name="Item 1">Item 1</li>
+        <li data-name="Item 2">Item 2</li>
+        <li data-name="Item 3">Item 3</li>
+        <!-- Add more items as needed -->
+    </ul>
+
+    <script>
+        function filterResults() {
+            // Get the input value
+            var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            // Get the list of items
+            var items = document.querySelectorAll('#resultsList li');
+
+            // Loop through each item
+            items.forEach(function(item) {
+                // Get the data-name attribute value (assuming this is where the search term is)
+                var itemName = item.getAttribute('data-name').toLowerCase();
+
+                // Check if the search term is found in the item name
+                if (itemName.includes(searchTerm)) {
+                    // If found, display the item
+                    item.style.display = 'block';
+                } else {
+                    // If not found, hide the item
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
