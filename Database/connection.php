@@ -2,7 +2,7 @@
 $hostName = "localhost";
 $userName = "root";
 $password = "";
-$database = "inmotion";
+$database = "inmotionhub";
 
 $con = mysqli_connect($hostName, $userName, $password, $database);
 if($con){

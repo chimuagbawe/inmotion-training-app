@@ -9,6 +9,7 @@ $sql = "CREATE TABLE teachers(
     department VARCHAR(255) NOT NULL,
     programming_language VARCHAR(255) NOT NULL,
     spoken_language VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 )";
 

@@ -133,8 +133,14 @@ $formattedTime = $currentDateTime->format("h:ia");
 
 </html>';
 if (!$mail->send()) {
-    echo "Error: " . $mail->ErrorInfo;
-    die();
+    $_SESSION['message'] = 'ERROR!!!';
+    $_SESSION['action'] = "";
+    $_SESSION["nameError"] = "Error: " . $mail->ErrorInfo;
+    $_SESSION['passwordError']  = "";
+    $_SESSION['emailError']  = "";
+    $_SESSION['success'] = "";
+    header("Location: ../index.php"); 
+    // die();
 }
 
     $_SESSION['message'] = 'Success!!!';

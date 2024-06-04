@@ -263,7 +263,7 @@ include('included/signUp.php');
                         </div>
                         <div class="blog_title">
                             <span>look At</span>
-                            <h3><a href="javascript:void(0);" id="scrollButton">Next Scheduled</a></h3>
+                            <h3><a href="#events" id="scrollButton">Next Scheduled</a></h3>
                             <p>Explore our upcoming events and stay ahead of the curve. Check out the 'Next
                                 Scheduled' section to discover the exciting learning opportunities waiting for you
                                 on our calendar.....</p>
@@ -583,7 +583,7 @@ $_SESSION['bought'] = "";
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="event_title_wrapper">
                     <div class="sub_title">
-                        <h2>Our Upcoming Events</h2>
+                        <h2 id="events">Our Upcoming Events</h2>
                         <p>Explore exciting opportunities with our upcoming events. Join us for enriching
                             experiences, networking, and knowledge-sharing. Don't miss out on what's next!</p>
                     </div><!-- ends: .section-header -->

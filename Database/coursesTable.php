@@ -10,6 +10,7 @@ $sql = "CREATE TABLE courses(
     price VARCHAR(255) NOT NULL,
     courseDescription TEXT NOT NULL,
     image TEXT NOT NULL,
+    student_count INTEGER(10) NOT NULL,
     created_at TIMESTAMP NOT NULL,
     FOREIGN KEY (teacher_id) REFERENCES teachers(id) ON DELETE CASCADE ON UPDATE CASCADE
 )";
